@@ -22,7 +22,7 @@ var widget = Widget({
 
 function update() {
    Request({
-      url: "https://data.mtgox.com/code/data/getTrades.php",
+      url: "https://data.mtgox.com/api/1/BTCUSD/ticker",
       onComplete: function (response) {
          price = response.json.ticker["buy"];
          price = Math.round(price*100)/100;
