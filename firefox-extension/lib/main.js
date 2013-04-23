@@ -22,7 +22,7 @@ var widget = Widget({
 
 function update() {
    Request({
-      url: "https://api.tradehill.com/APIv1/USD/Ticker",
+      url: "https://data.mtgox.com/code/data/getTrades.php",
       onComplete: function (response) {
          price = response.json.ticker["buy"];
          price = Math.round(price*100)/100;
